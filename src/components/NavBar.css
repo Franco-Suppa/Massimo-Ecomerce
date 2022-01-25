@@ -1,0 +1,43 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navList li {
+    list-style: none;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: 20px;
+    color: white;
+    
+}
+
+  
+
+
+.navList {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.navBar {
+    
+    background-color: gray;
+}
+
+.navList h1 {
+    margin-right: auto;
+    padding-top: 15px;
+}
+
+.navList li a {
+    text-decoration: none;
+    color: white;
+}

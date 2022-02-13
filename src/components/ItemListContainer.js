@@ -2,14 +2,22 @@ import ItemCount from './ItemCount'
 import {useEffect, useState} from 'react'
 import {getProducts} from '../api/api'
 import ItemList from './ItemList'
+import { useParams } from 'react-router-dom'
 
 function ItemListContainer() {
  const [products, setProducts] = useState([])
+ const { categoryName } = useParams()
     useEffect(() => {
         getProducts().then(function(products) {
-            setProducts(products)
+            if (!categoryName) {setProducts(products)} else {
+            const itemsPorCategoria= products.filter((producto) => {
+               return producto.category === categoryName
+            })
+            setProducts(itemsPorCategoria) 
+            }
+            
         })
-    }, [])
+    }, [categoryName])
 
     function onAddItem(valor) {
         

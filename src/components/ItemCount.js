@@ -15,7 +15,7 @@ function ItemCount( {stock, initial, onAdd}) {
       }
   }
 
-  function agregarCarro() {
+  function agregarCarro(event) {
       onAdd(contadorItem)
   }
     return (

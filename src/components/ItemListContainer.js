@@ -1,4 +1,3 @@
-import ItemCount from './ItemCount'
 import {useEffect, useState} from 'react'
 import {getProducts} from '../api/api'
 import ItemList from './ItemList'
@@ -27,7 +26,7 @@ function ItemListContainer() {
     return (
         <div>
         {products.length > 0 ? <ItemList products={products} /> : <p>Cargando...</p>}
-        <ItemCount stock={10} initial={1} onAdd={onAddItem}/>
+       
         </div>
     )
 }

@@ -11,7 +11,7 @@ function NavBar() {
           <li><NavLink to="category/remeras">Remeras</NavLink></li>
           <li><NavLink to="category/pantalones">Pantalones</NavLink></li>
           <li><NavLink to="category/buzos">Buzos</NavLink></li>
-          <li><CartWidget/></li>
+          <Link to='/cart'><li><CartWidget/></li></Link>
           </ul>
           
           </div>

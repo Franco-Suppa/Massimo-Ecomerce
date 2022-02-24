@@ -4,7 +4,7 @@ const products = [
         title: 'Remera cuello redondo',
         price: '2000',
         description: 'Una remera muy comoda para el dia a dia',
-        imgUrl: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/111/097/products/santinoretoque1-111-85ec14d7d65360812d16371681540497-1024-1024.jpg',
+        imgUrl: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/111/097/products/_mg_55001-14d8acb5c9cec94e0e16431355290686-1024-1024.jpg',
         category:'remeras'
     },
 

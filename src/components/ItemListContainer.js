@@ -2,6 +2,8 @@ import {useEffect, useState} from 'react'
 import {getProducts} from '../api/api'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../firebase'
 
 function ItemListContainer() {
  const [products, setProducts] = useState([])
@@ -17,6 +19,8 @@ function ItemListContainer() {
             
         })
     }, [categoryName])
+
+
 
     function onAddItem(valor) {
         

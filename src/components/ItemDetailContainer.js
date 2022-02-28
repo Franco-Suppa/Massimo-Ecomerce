@@ -1,15 +1,22 @@
 import {useEffect, useState} from 'react'
-import {getProducts} from '../api/api'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
+import { db } from '../firebase'
+import { doc, getDoc } from 'firebase/firestore'
 
 function ItemDetailContainer() {
     const [item, setItem] = useState()
     const {itemId} = useParams() 
     useEffect(() => {
-        getProducts().then((items) => {
-        const item = items.find((i) => i.id === Number(itemId));
-           setItem(item)
+        const itemRef = doc(db, "items", itemId)
+        getDoc(itemRef)
+        .then((snapshot) => {
+            if(snapshot.exists()) {
+                setItem( {id: snapshot.id, ...snapshot.data()})
+            }
+        })
+        .catch(error => {
+            console.log(error)
         })
     }, [itemId])
 

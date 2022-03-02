@@ -17,7 +17,7 @@ function ItemDetail({item}) {
               <p className='description'>{item.description}</p>
               {
                 !itemCount ?
-                  <ItemCount stock={10} initial={1} onAdd={onAddItem}/>
+                  <ItemCount stock={item.stock} initial={1} onAdd={onAddItem}/>
                   :
                   <Link to="/cart">Terminar Compra</Link>
               }

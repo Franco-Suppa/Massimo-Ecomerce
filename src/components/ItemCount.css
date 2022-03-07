@@ -1,0 +1,11 @@
+.itemCount{
+    display: flex;
+}
+
+.itemCount button{
+    margin: 10px;
+}
+
+.itemCount p{
+    padding-top: 10px;
+}

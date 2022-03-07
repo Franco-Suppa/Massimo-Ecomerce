@@ -1,0 +1,22 @@
+.disabled{
+    cursor: not-allowed;
+}
+
+img {
+    width: 25%;
+}
+
+form {
+    display: flex;
+    justify-content: end;
+    width: 29%;
+    flex-wrap: wrap;
+}
+
+form div {
+    padding: 5px;
+}
+
+.alert p{
+    font-weight: bold;
+}

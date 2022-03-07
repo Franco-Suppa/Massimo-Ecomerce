@@ -11,16 +11,29 @@ function ItemDetail({item}) {
   }
     return (
         <div>
-          <img src={item.imgUrl} alt="Imagen del producto" />
-              <p>{item.title}</p>
-              <p className='price'>$ {item.price}</p>
-              <p className='description'>{item.description}</p>
-              {
+
+
+              <div className='col'>
+                <div className="card" style={{width: "18rem"}}>
+                <img src={item.imgUrl}  className="card-img-top" alt='Imagen Procuto'/>
+                <div className="card-body">
+                <h5 className="card-title">{item.title}</h5>
+                <p className="card-text">Precio ${item.price}</p>
+                <p className="card-text">{item.description}</p>
+
+
+                {
                 !itemCount ?
                   <ItemCount stock={item.stock} initial={1} onAdd={onAddItem}/>
                   :
-                  <Link to="/cart">Terminar Compra</Link>
+                  <Link to="/cart"><button className='btn btn-success'>Ir al carrito </button></Link>
               }
+                </div>
+                </div>
+                </div>
+
+
+
             </div>
       )
 }

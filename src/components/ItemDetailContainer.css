@@ -1,0 +1,13 @@
+.hide {
+    display: none;
+}
+
+.loading {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.animation{
+    margin: auto;
+}

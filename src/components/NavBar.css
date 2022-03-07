@@ -6,15 +6,15 @@
 }
 .navList li {
     list-style: none;
-    border-color: black;
+    border-color: lightcoral;
+    border-width: 2px;
     border-style: solid;
     border-radius: 5%;
     padding-top: 20px;
-    padding-bottom: 20px;
     padding-right: 20px;
     padding-left: 20px;
     margin-right: 20px;
-    color: white;
+    color: red;
     
 }
 
@@ -24,20 +24,37 @@
 .navList {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .navBar {
     
-    background-color: gray;
+    background-color: lightgrey;
 }
 
 .navList h1 {
     margin-right: auto;
     padding-top: 15px;
+    color: lightcoral;
+    padding-right: 5px;
+    
+
 }
 
 .navList li a {
+    font-weight: bold;
     text-decoration: none;
-    color: white;
+    color: lightslategray;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navBar a {
+    display: inline-block;
+}
+
+.link{
+    text-decoration: none;
 }
